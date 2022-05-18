@@ -78,6 +78,8 @@ app.post('/login', (req,res) => {
 })
 
 // starting the server
-app.listen(3001, () => {
-  console.log('listening on port 3001');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.warn(`App listening on http://localhost:${PORT}`);
 });
+
